@@ -1,0 +1,41 @@
+pool_id,visit_date,tech,free_chlorine,ph,alkalinity,cya,salt,water,tech_note
+P01,2026-10-22,Jenny,4.3,7.6,99,59,,clear,Skimmed leaves
+P02,2026-10-20,Jenny,4.3,7.4,115,54,,clear,Cleaned filter
+P03,2026-10-23,Jenny,4.4,7.4,101,130,,clear,Stabilizer very high again
+P04,2026-10-21,Jenny,3.4,7.4,107,66,,clear,
+P05,2026-10-19,Jenny,4.2,8.1,91,46,,clear,
+P06,2026-10-22,Jenny,4.6,7.4,110,44,,clear,"Brushed walls, emptied baskets"
+P07,2026-10-20,Jenny,4.8,7.5,119,64,,clear,Skimmed leaves
+P08,2026-10-23,Jenny,4,7.4,118,61,3600,clear,
+P09,2026-10-21,Jenny,4.8,7.3,111,74,,clear,
+P10,2026-10-19,Jenny,3.4,7.6,111,48,,clear,"Spa heater will not turn on, error code on panel"
+P11,2026-10-22,Jenny,4.6,7.5,88,66,3100,clear,
+P12,2026-10-20,Jenny,2.1,7.5,99,55,,clear,
+P13,2026-10-23,Jenny,3.1,7.6,93,52,,clear,
+P14,2026-10-21,Jenny,3.8,7.4,109,65,,clear,
+P15,2026-10-19,Omar,3.2,7.5,116,61,3300,clear,Cleaned filter
+P16,2026-10-22,Omar,0.2,7.9,105,47,,green,Algae on walls and steps
+P17,2026-10-20,Omar,4.7,7.4,111,56,,clear,Cleaned filter
+P18,2026-10-23,Omar,4.2,7.5,92,58,,clear,"Brushed walls, emptied baskets"
+P19,2026-10-21,Omar,0.8,7.4,115,48,,cloudy,Cleaned filter
+P20,2026-10-19,Omar,3.7,7.5,97,68,3100,clear,
+P21,2026-10-22,Omar,4.2,7.3,97,75,3100,clear,
+P22,2026-10-20,Omar,0.5,7.5,91,69,,clear,Skimmed leaves
+P23,2026-10-23,Omar,3.5,7.3,103,57,,clear,
+P24,2026-10-21,Omar,1.6,7.4,102,61,,clear,
+P25,2026-10-22,Omar,,,,,,,"No service. Dog loose in yard, could not enter"
+P26,2026-10-22,Omar,4.6,7.7,100,54,,clear,Cleaned filter
+P27,2026-10-20,Omar,4.7,7.6,96,58,,clear,
+P28,2026-10-23,Raúl,3.8,7.7,117,37,,clear,
+P29,2026-10-21,Raúl,3.6,7.6,105,47,,clear,"Brushed walls, emptied baskets"
+P30,2026-10-19,Raúl,3.9,7.5,107,60,2300,clear,Low salt light on the control panel
+P31,2026-10-22,Raúl,3.2,7.3,81,41,,clear,
+P32,2026-10-20,Raúl,3.9,7.4,117,70,3050,clear,Skimmed leaves
+P33,2026-10-23,Raúl,4,7.3,88,54,3500,clear,"Pump making grinding noise, leaking at the seal"
+P34,2026-10-21,Raúl,4.9,7.6,81,56,,clear,
+P35,2026-10-19,Raúl,4,17,83,64,3100,clear,"Brushed walls, emptied baskets"
+P36,2026-10-22,Raúl,3.3,7.6,95,40,,clear,Cleaned filter
+P37,2026-10-20,Raúl,3.3,7.5,95,41,,clear,
+P38,2026-10-23,Raúl,2,7.5,83,51,,clear,
+P39,2026-10-21,Raúl,4.6,7.4,108,52,,clear,Skimmed leaves
+P40,2026-10-23,Raúl,,,,,,,No service. Side gate padlocked

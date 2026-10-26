@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hackathon App",
-  description: "Built at the uStart AI hackathon",
+  title: "Royal Palm Operator Desk",
+  description: "Monday revisits, truck loads, and customer texts for Royal Palm Pool Service",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

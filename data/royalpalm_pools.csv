@@ -1,0 +1,41 @@
+pool_id,customer,area,type,gallons,has_spa,service_day,tech,monthly_rate,language
+P01,Jorge Kaplan,Coral Gables,chlorine,10500,no,Thu,Jenny,150,es
+P02,Jessica Urrutia,Coral Gables,chlorine,22000,yes,Tue,Jenny,205,es
+P03,Fernando Gill,Coral Gables,chlorine,30000,no,Fri,Jenny,200,es
+P04,Nicole Echeverría,Coral Gables,chlorine,18000,no,Wed,Jenny,175,en
+P05,Diego Hayes,Coral Gables,chlorine,27000,no,Mon,Jenny,200,en
+P06,Ana Zamora,Coral Gables,chlorine,14000,yes,Thu,Jenny,180,en
+P07,Ricardo Lugo,Coral Gables,chlorine,17000,yes,Tue,Jenny,205,es
+P08,Laura Jiménez,Coral Gables,salt,19500,no,Fri,Jenny,175,en
+P09,Pablo Quinn,Coral Gables,chlorine,26500,no,Wed,Jenny,200,en
+P10,Camila Duarte,Coral Gables,chlorine,11000,yes,Mon,Jenny,180,en
+P11,Victor Bermúdez,Coral Gables,salt,17000,no,Thu,Jenny,175,es
+P12,Daniela Brennan,Coral Gables,chlorine,27000,no,Tue,Jenny,200,en
+P13,David Valdés,Coral Gables,chlorine,18000,no,Fri,Jenny,175,en
+P14,Rachel Hurtado,Coral Gables,chlorine,31500,no,Wed,Jenny,200,es
+P15,Steven Fuentes,South Miami,salt,24000,no,Mon,Omar,175,es
+P16,Elena Mercer,South Miami,chlorine,15500,no,Thu,Omar,175,en
+P17,Ramón Arce,South Miami,chlorine,27000,no,Tue,Omar,200,es
+P18,Sofía Montoya,South Miami,chlorine,26000,no,Fri,Omar,200,en
+P19,Michael Lozano,South Miami,chlorine,10000,no,Wed,Omar,150,es
+P20,Isabel Salas,South Miami,salt,22500,no,Mon,Omar,175,en
+P21,Alejandro Ellison,South Miami,salt,27000,yes,Thu,Omar,230,en
+P22,Rosa Cabrera,South Miami,chlorine,21500,no,Tue,Omar,175,es
+P23,José Foster,South Miami,chlorine,23000,no,Fri,Omar,175,es
+P24,Valeria Weiss,South Miami,chlorine,14500,no,Wed,Omar,150,es
+P25,Brian Iglesias,South Miami,salt,27000,no,Thu,Omar,200,es
+P26,Lucía Garrido,South Miami,chlorine,29500,no,Thu,Omar,200,es
+P27,Gabriel Novak,South Miami,chlorine,17000,no,Tue,Omar,175,es
+P28,Hannah Benítez,Pinecrest,chlorine,19500,yes,Fri,Raúl,205,en
+P29,Carlos Navarro,Pinecrest,chlorine,23000,no,Wed,Raúl,175,es
+P30,Emily Ward,Pinecrest,salt,27000,no,Mon,Raúl,200,en
+P31,Kevin Toledo,Pinecrest,chlorine,11000,no,Thu,Raúl,150,en
+P32,Karen Ferrer,Pinecrest,salt,30500,no,Tue,Raúl,200,en
+P33,Thomas Delgado,Pinecrest,salt,14500,no,Fri,Raúl,150,en
+P34,Julia Goldberg,Pinecrest,chlorine,16500,yes,Wed,Raúl,205,es
+P35,Luis Yates,Pinecrest,salt,11000,yes,Mon,Raúl,180,es
+P36,Sarah Kemp,Pinecrest,chlorine,27500,yes,Thu,Raúl,230,en
+P37,Andrew Ibáñez,Pinecrest,chlorine,24000,no,Tue,Raúl,175,en
+P38,Patricia Porter,Pinecrest,chlorine,180000,no,Fri,Raúl,175,en
+P39,Mark Coleman,Pinecrest,chlorine,18000,no,Wed,Raúl,175,es
+P40,María Alonso,Pinecrest,chlorine,17500,no,Fri,Raúl,175,en
