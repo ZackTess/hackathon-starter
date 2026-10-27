@@ -85,6 +85,10 @@ export function checkDraft(job: TextJob, text: string): string | null {
   if (!text.includes(SIGNATURE)) return "missing signature";
   const dollars = [...text.matchAll(/\$\s?(\d[\d,]*(?:\.\d+)?)/g)].map((m) => Number(m[1].replace(/,/g, "")));
   if (dollars.some((n) => !job.allowedDollars.includes(n))) return "mentions a price we didn't give it";
+  // Required facts: an approval text must state the price, and revisit texts must say today.
+  if (job.allowedDollars.some((n) => !dollars.includes(n))) return "leaves out the price";
+  if ((job.kinds.includes("unsafe") || job.kinds.includes("makeup")) && !/\b(today|hoy)\b/i.test(text)) return "doesn't say we're coming today";
+  if (job.kinds.includes("cya") && !/\b(yes|s[ií]|ok|okay|aprob|approv|autoriz)/i.test(text)) return "doesn't ask for approval";
   if (job.kinds.includes("makeup") && MISS_REASON.test(text)) return "explains the missed visit";
   if (BLAME.test(text)) return "blames the customer";
   if (REPAIR_PRICE.test(text)) return "quotes a repair price";

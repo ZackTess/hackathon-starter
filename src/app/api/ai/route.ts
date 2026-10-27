@@ -23,6 +23,7 @@ const TEXTS_PROMPT = `You draft short SMS texts to pool-service customers for Ro
 Rules:
 - Write in the language given: "es" = Spanish (Latin American, usted), "en" = English.
 - Use ONLY the facts given. Do not add numbers, prices, times, or reasons that are not in the facts.
+- Include EVERY fact given, especially any price (write it exactly, e.g. $175) and that we are coming today.
 - Short and specific: what we found, what happens next, and when. 2–4 sentences.
 - Never blame the customer. Never quote a repair price.
 - For make-up visits, say we'll be there today. Never say or hint at why a visit was missed.
@@ -86,33 +87,36 @@ export async function POST(req: Request) {
     }
 
     if (body.task === "texts" && Array.isArray(body.jobs)) {
-      const res = await withTimeout(
-        ai.models.generateContent({
-          model: MODEL,
-          contents: JSON.stringify(body.jobs.slice(0, 100)),
-          config: {
-            systemInstruction: TEXTS_PROMPT,
-            temperature: 0.3,
-            responseMimeType: "application/json",
-            responseJsonSchema: {
-              type: "object",
-              properties: {
-                texts: {
-                  type: "array",
-                  items: {
-                    type: "object",
-                    properties: { id: { type: "string" }, text: { type: "string" } },
-                    required: ["id", "text"],
-                  },
+      // One request per text, in parallel: total time ≈ the slowest single draft.
+      // A text that fails is left out, and the page uses its template instead.
+      const drafts = await Promise.allSettled(
+        body.jobs.slice(0, 50).map(async (job) => {
+          const res = await withTimeout(
+            ai.models.generateContent({
+              model: MODEL,
+              contents: JSON.stringify(job),
+              config: {
+                systemInstruction: TEXTS_PROMPT,
+                temperature: 0.3,
+                responseMimeType: "application/json",
+                responseJsonSchema: {
+                  type: "object",
+                  properties: { text: { type: "string" } },
+                  required: ["text"],
                 },
               },
-              required: ["texts"],
-            },
-          },
+            })
+          );
+          const parsed = JSON.parse(res.text ?? "{}");
+          if (typeof parsed.text !== "string") throw new Error("no text");
+          return { id: job.id, text: parsed.text as string };
         })
       );
-      const parsed = JSON.parse(res.text ?? "{}");
-      return Response.json({ texts: parsed.texts ?? [], model: MODEL });
+      const texts = drafts.flatMap((d) => (d.status === "fulfilled" ? [d.value] : []));
+      const failed = drafts.length - texts.length;
+      if (failed) console.warn(`Gemini drafted ${texts.length}/${drafts.length} texts; the rest use templates.`);
+      if (texts.length === 0) return Response.json({ fallback: true });
+      return Response.json({ texts, model: MODEL });
     }
 
     return Response.json({ error: "Unknown task" }, { status: 400 });
